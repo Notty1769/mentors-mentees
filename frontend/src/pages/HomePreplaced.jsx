@@ -1,6 +1,6 @@
 import React from "react";
 
-const Home = () => {
+const HomePreplaced = () => {
   return (
     <div>
       <h1>Welcome to preplaced</h1>
@@ -8,4 +8,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePreplaced;

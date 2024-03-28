@@ -1,7 +1,6 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
-import Home from "./pages/Home";
+import HomePreplaced from "./pages/HomePreplaced";
 // import Login from "./components/Login/Login";
 // import PhoneNumberValidation from "./phoneNumberValidation";
 // import Button from "./Button";
@@ -11,7 +10,7 @@ const App = () => {
   return (
     <div className="grid-container">
       <NavigationBar />
-      <Home />
+      <HomePreplaced />
       {/* <Form /> */}
       {/* <PhoneNumberValidation /> */}
       {/* <Button /> */}

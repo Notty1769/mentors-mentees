@@ -1,0 +1,1 @@
+This file is just to make sure git recognizes this empty tables folder. Once you add your files delete make
