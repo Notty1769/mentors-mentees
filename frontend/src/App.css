@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes scroll {
+  0% {
+      transform : translateX(0);
+  }
+  100% {
+      transform : translate(calc(-250px *9))
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+main{
+  background-color: rgba(190, 230, 252, .5);
+}
+
+.home{
+  padding-top: 35px;
+  
+
+}
+
+.home a{
+  border-radius: 35px;
+  font-size: 12px;
+}
+
+.home a:hover{
+
+  background-color: black;
+  color: azure;
+
+}
+
+
+.home h2{
+  font-size: 50px;
+}
+
+.mentorship{
+  font-family: "Instrument Serif", serif;
+font-weight: 500;
+font-style: italic;
+font-size: 54px;
+}
+
+.home p{
+  padding-top: 15px;
+  opacity: 0.9;
+}
+
+.home button{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.skill{
+  padding-top: 20px;
+  
+}
+
+.skill a{
+  font-size: 14px;
+}
+
+.slider{
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+
+
+.slider-track{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  animation: scroll 40s linear infinite;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.slider-track:hover{
+  animation-play-state: paused;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.slider-story{
+  width: 300px;
+  height:350px;
+  margin-left: 20px;
 }
+
