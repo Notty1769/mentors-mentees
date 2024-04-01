@@ -1,6 +1,6 @@
 import React from "react";
 
-const Home = () => {
+const TemporaryHome = () => {
   return (
     <>
       <main>
@@ -115,4 +115,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default TemporaryHome;
