@@ -1,0 +1,6 @@
+/* Styles for screens larger than 768px */
+@media (max-width: 768px) {
+  #lgNavBar {
+    display: none;
+  }
+}
