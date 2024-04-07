@@ -3,7 +3,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import HomePreplaced from "./pages/HomePreplaced";
-import OrderStatus from "./components/Cards/OrderStatus";
+import StripedTable from "./components/Tables/StripedTable";
+// import OrderStatus from "./components/Cards/OrderStatus";
 // import Login from "./components/Login/Login";
 // import PhoneNumberValidation from "./phoneNumberValidation";
 // import Button from "./Button";
@@ -12,14 +13,14 @@ import OrderStatus from "./components/Cards/OrderStatus";
 const App = () => {
   return (
     <div className="grid-container">
-      <NavigationBar />
-      <HomePreplaced />
+      {<NavigationBar />}
+      {/* <HomePreplaced /> */}
       {/* <Form /> */}
       {/* <PhoneNumberValidation /> */}
       {/* <Button /> */}
       {/* <Login /> */}
-
       {/* <OrderStatus /> */}
+      {<StripedTable/>}
     </div>
   );
 };
