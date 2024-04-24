@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
-}
+/* Original CSS code for the top navbar */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.top-navbar {
+  position: relative;
+  background-color: #333;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-form,
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.search-form button,
+.add-button,
+.notification-button,
+.profile-button {
+  font-size: 1rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.add-button,
+.notification-button,
+.profile-button {
+  display: flex;
+  align-items: center;
+}
+
+.add-button svg {
+  margin-right: 6px;
+}
+
+/* Styles for individual buttons */
+.add-button {
+  background-color: #007bff; /* Blue color */
+}
+
+.add-button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.search-form button {
+  background-color: #4CAF50; /* Green color */
+}
+
+.search-form button:hover {
+  background-color: #45a049; /* Darker green color on hover */
+}
+
+.nav-icons .icon {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-icons .icon:hover {
+  color: #ddd; /* Change color on hover */
+}
+
+/* Adjust positioning of profile, notification, and add buttons */
+.notification-button {
+  margin-left: 1rem; /* Adjust margin-left to position the notification button */
+}
+
+.dropdown {
+  position: relative; /* Position relative for absolute positioning of dropdown */
+}
+
+.dropdown-options {
+  color: #000;
+  font-size: 20px;
+  position: absolute;
+  top: 100%; /* Position below the dropdown button */
+  left: 0;
+  z-index: 1000; /* Ensure dropdown is above other elements */
+  background-color: #fff; /* Dropdown background color */
+  border: 1px solid #ddd; /* Dropdown border */
+  border-radius: 4px; /* Dropdown border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Dropdown box shadow */
+  padding: 8px 0; /* Dropdown padding */
+}
+
+.dropdown-options div {
+  width: 170px;
+  padding: 8px 16px; /* Option padding */
+  cursor: pointer; /* Cursor pointer */
+}
+
+.dropdown-options div:hover {
+  background-color: #f5f5f5; /* Option background color on hover */
+}
+
+/* Profile button dropdown */
+.profile-dropdown-options {
+  position: absolute;
+  color: #000;
+  font-size: 20px;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure dropdown appears above other content */
+}
+
+.profile-dropdown-options div {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-dropdown-options div:hover {
+  background-color: #f5f5f5;
+}
+
+/* Sidebar CSS */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  line-height: 3;
+}
+
+.sidebar-item span {
+  margin-left: 10px;
+}
+
+.sidebar-item:hover {
+  background-color: #555;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .search-form {
+    display: none; /* Hide search form for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .nav-icons {
+    justify-content: flex-end; /* Align nav icons to the right for smaller screens */
+    flex: 1; /* Take up remaining space */
+  }
+  
+  .notification-button {
+    margin-left: 0; /* Remove margin for notification button */
+  }
+  
+  .profile-button {
+    margin-left: 1rem; /* Restore margin for profile button */
+  }
+  
+  .sidebar {
+    width: 100%; /* Full width for sidebar on smaller screens */
   }
 }
